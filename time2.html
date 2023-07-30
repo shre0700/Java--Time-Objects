@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="main">
+    <p id="days" class="display_days display"></p>
+    <p id="hours" class="display_hours display"></p>
+    <p id="mins" class="display_mins display"></p>
+    <p id="sec" class="display_sec display"></p>
+    </div>
+    <script>
+            var count_to_date = new Date();
+        // var clock = setInterval(myClock);
+            var dt = new Date();
+            var days = dt.getDay();
+            document.getElementById('days').innerHTML = days;
+            var hours = dt.getHours();
+            document.getElementById('hours').innerHTML = hours;
+            var mins = dt.getMinutes();
+            document.getElementById('mins').innerHTML = mins;
+            var sec = dt.getSeconds();
+            document.getElementById('sec').innerHTML = sec;
+
+    </script>
+</body>
+</html>
