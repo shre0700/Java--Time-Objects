@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: lightblue;">
+    <div class="main">
+        <div class="sub1-main">
+            <p class="p1" id="num_1"></p>
+            <p class="sum"> + </p>
+            <p class="p2" id="num_2"></p>
+            <p class="equal"> = </p>
+        </div>
+        <div class="sub2-main">
+            <input type="text" placeholder="Enter the sum" id="input_user" class="input_userr">
+            <button class="check" onclick="checkk(document.getElementById('input_user').value)">Check</button>
+        </div>
+    </div>
+    <script>
+        var num1 = Math.floor(Math.random()*10);
+        var num2 = Math.floor(Math.random()*10);
+        var actual_sum_of_num = parseInt(num1) + parseInt(num2);
+        document.getElementById("num_1").innerHTML = num1;
+        document.getElementById("num_2").innerHTML = num2;
+        var user_sum_of_num = parseInt(document.getElementById("input_user"));
+        function checkk(user_sum_of_num){
+        if(user_sum_of_num != actual_sum_of_num ){
+            alert("Incorrect");
+        }
+        else{
+            alert("Correct");
+        }
+    }
+    </script>
+</body>
+</html>
